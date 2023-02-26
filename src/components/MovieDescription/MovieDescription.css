@@ -1,0 +1,51 @@
+.description-container {
+    display: flex;
+    width: 50%;
+    border-left: 0.5px solid var(--primary-border-color);
+    height: 87vh;
+}
+
+.no-movie-selected {
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-movie-wrapper {
+    padding: 2rem;
+}
+
+.movie-wrapper p {
+    margin: 2rem 0;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.director-field {
+    font-size: 1.25rem;
+    line-height: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .description-container {
+        width: 96%;
+        height: 80vh;
+        padding: 1rem 0.5rem;
+        border: none;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .movie-wrapper p {
+        font-size: 0.9rem;
+        margin: 0.75rem 0;
+        line-height: 1.5rem;
+    }
+
+    .director-field {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        ;
+    }
+}

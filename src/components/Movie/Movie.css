@@ -1,0 +1,59 @@
+.movie-card-container {
+    display: flex;
+    padding: 1rem;
+    text-align: start;
+    width: 100%;
+    border-bottom: 0.5px solid var(--primary-border-color);
+}
+
+.movie-card-container:hover,
+.movie-card-container:focus {
+    background-color: var(--hover-background-color);
+}
+
+.dark .movie-card-container:hover,
+.dark .movie-card-container:focus {
+    background-color: var(--dark-primary-background-color);
+}
+
+.episode-release-date {
+    width: 15%;
+    font-weight: 300;
+}
+
+.episode-num {
+    letter-spacing: 3px;
+    width: 25%;
+    font-weight: 300;
+    ;
+}
+
+.episode-num-title {
+    width: 60%;
+    font-weight: 600;
+}
+
+.movie-description {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .movie-card-container {
+        padding: 1rem 0.5rem;
+        gap: 7px;
+    }
+
+    .episode-num {
+        width: 55%;
+    }
+
+    .episode-num-title {
+        width: 100%;
+        line-height: 1.25rem;
+    }
+
+    .episode-release-date {
+        width: 43%;
+    }
+
+}

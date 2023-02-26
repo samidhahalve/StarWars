@@ -1,0 +1,15 @@
+.movie-list-container {
+    width: 50%;
+}
+
+.no-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .movie-list-container {
+        width: 100%;
+    }
+}
