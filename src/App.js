@@ -1,6 +1,5 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 
 import { MovieList, MovieDescription, SearchAndSortMovie } from './components';
 
@@ -26,14 +25,18 @@ function App() {
   }
 
   useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const { data } = await axios.get("https://swapi.dev/api/films/?format=json");
-        const { results } = data;
-        dispatch(setMovies(results));
-      } catch (error) {
-        console.log(error);
-      }
+    const fetchMovies = () => {
+      fetch("https://swapi.dev/api/films/?format=json")
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Request failed with status ${response.status}`)
+          }
+          return response.json()
+        })
+        .then(data => {
+          const { results } = data;
+          dispatch(setMovies(results));
+        });
     }
     fetchMovies();
   }, [dispatch])
