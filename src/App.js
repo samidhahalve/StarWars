@@ -46,7 +46,7 @@ function App() {
       </header>
       <SearchAndSortMovie />
       <div className="movie-container">
-        <MovieList movies={searchMovie.value.length > 0 ? (searchMovie.list.length > 0 ? searchMovie.list : []) : sortMovies(movies, sortByParam)} />
+        <MovieList movies={searchMovie.value.length > 0 ? (searchMovie.list.length > 0 ? sortMovies(searchMovie.list, sortByParam) : []) : sortMovies(movies, sortByParam)} />
         <MovieDescription movie={movies.filter(movie => movie.episode_id === currentEpisode)} />
       </div>
     </div>
